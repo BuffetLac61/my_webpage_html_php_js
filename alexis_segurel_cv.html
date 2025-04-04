@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Online CV</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <meta charset="UTF-8"/>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var body = document.body;
+
+            if (scrollPosition > 100) {
+                body.style.backgroundColor = 'lightblue';
+            } else {
+                body.style.backgroundColor = 'white';
+            }
+        });
+    </script>
+    <script>
+        setInterval(function () {
+            stringRandomColor = 'rgb('+Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
+            document.querySelector('random').style.color = stringRandomColor;
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <h1 class = "one" >Welcome to my Online CV</h1>
+        <p>
+        Engineering Master’s Degree | Data engineering & AI | Centrale Lille <br>
+        Cybersecurity Level 6 Degree (BAC +4) | Secured System Administrator Certification RNCP37680 | Jedha
+        </p>
+
+        <p class = "link">
+        <a  href="https://github.com/BuffetLac61">Github</a>
+        <a  href="www.linkedin.com/in/alexis-segurel-848b91197">Linkedin</a>
+        </p>
+    <div class="three">
+        <h1 class="three">Education</h2>
+    </div>
+        <p class="important_text">2025 - Today</p>
+        <p>4 months course to obtain Level 6 Certification at Jedha IT school, Paris, Specialized in cybersecurity and Syst
+        Admin.<br>
+        Multiple Hackathon in Web and Wifi Pentest, Linux and Windows kernel exploitation for escalation of privilege.
+        </p>
+
+        <p class="important_text">2020 - 2025</p>
+
+        <p>Engineering Master at Centrale Lille, Specialized in Machine Learning, Data Science and App dev, Lille, France.<br>
+        6 months project using NLP and a large financial dataset to optimize the budgetting of Lille’s Hospital
+        pharmaceutical department. As RMSE and MAE were lower for two models, the budgetting tool was successfully used
+        by the hospital for 2025 budget forecasting.<br>
+        6 months project developing an Android App (Kotlin) to detect cheats in Black Jack games using VR Glasses
+        </p>
+
+        <p class="important_text">2018 - 2020</p>
+        <p>Two-year undergraduate intensive course in mathematics, physics and engineering to prepare for nationwide
+        competitive examination (Classe Préparatoire PSI*), Fénelon Ste Marie, Paris.</p>
+
+        <p class="important_text">2016 - 2018</p>
+        <p>High School Diploma (Baccalaureate), Major in Science with highest honor. Stanislas boarding school, Paris</p>
+    <h2>Experience</h2>
+
+        <p class="important_text">May 2024 - Septembre 2024</p>
+        <p>Data engineer internship at BSPORT SOLUTION, using Django framework and developing data scrapping and
+        standardizing tools to migrate client’s data from their previous software provider to our software platform.<br>
+        Coding projects were carried out on Linux operating system.<br>
+        Participated to the collaborative development of a python oriented object tool that automates the data migration
+        process
+        </p>
+
+        <p class="important_text">2022 - February 2023</p> 
+        <p>Audit and corporate finance consulting internship, EY, Paris.<br>
+        Participated to the full financial audit of a major french nuclear energy company.
+        </p>
+
+        <p class ="important_text">March 2022 - August 2022</p>
+        <p>Data analyst and PowerBI internship in supply-chain and customer negociations, L'Oréal, Paris.<br>
+        Used Python skills to transform data coming from our distributors’ cash registers and provided a BI report well
+        appreciated by our commercial branch to negotiate with our distributors.<br>
+        Over the 6 month period the amount of contested logistic penalties was more than doubled in value thanks to new
+        french legislations Egalim III and to the visibility offered by my BI report.
+        </p>
+
+    <h2>Skills</h2>
+    <p>
+        Bash, Python (Django), C, Kotlin, SQL, Excel, Power BI <br>
+        > Pandas, sk-learn, Numpy, Seaborn, Pytorch, Keras<br>
+        > Wireshark, LinPEAS, nmap, GNS3, Hydra, burpsuite<br>
+    </p>
+</body>
+</html>
