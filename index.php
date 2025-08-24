@@ -3,7 +3,6 @@
     <title>Alexis Segurel Online CV</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <meta charset="UTF-8"/>
-    <link rel="javascript" type="text/javascript" href="script.js"/>
     <script>
         setInterval(function () {
             stringRandomColor = 'rgb('+Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
@@ -17,7 +16,7 @@
     <?php
       $server_name = "localhost";
       $user_name = "root";
-      $password = "Please don't look at my password lol";
+      $password = "";
       $database = "cvwebpage";
       $conn = mysqli_connect($server_name, $user_name, $password, $database);
       if (!$conn) {
@@ -27,11 +26,17 @@
 
       $sql_read = "SELECT visit_count FROM counter";
       $result = mysqli_query($conn, $sql_read);
+
       $row = mysqli_fetch_assoc($result);
-      $visitor_count = $row['visit_count']; 
-      $visitor_count++;
-      $sql_update = "UPDATE counter SET visit_count = $visitor_count";
-      $result = mysqli_query($conn, $sql_update);
+
+        if ($row) {
+            $visitor_count = $row['visit_count']; 
+            $visitor_count++;
+            $sql_update = "UPDATE counter SET visit_count = $visitor_count";
+            $result = mysqli_query($conn, $sql_update);
+        } else {
+            $visitor_count = "an unknown number of";
+        }
       mysqli_close($conn);
      ?>
 
@@ -49,7 +54,7 @@
         </p>
         <p class = "link">
         <a  href="https://github.com/BuffetLac61">Github</a>
-        <a  href="www.linkedin.com/in/alexis-segurel-848b91197">Linkedin</a>
+        <a  href="https:www.linkedin.com/in/alexis-segurel-848b91197">Linkedin</a>
         
         </p>
     <div class='three'>
